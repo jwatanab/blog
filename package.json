@@ -1,0 +1,15 @@
+{
+  "name": "cat",
+  "version": "1.0.0",
+  "description": "****",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "cd bin && cake server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
