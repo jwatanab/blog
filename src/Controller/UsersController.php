@@ -40,7 +40,8 @@ class UsersController extends AppController
      */
     public function index(...$path){
         $index = $user = $this->Auth->user();
-        $index ?  $this->redirect(['action' => 'form']) : null ;
+        if (empty($path[0])) $path[0] = 'archive';
+        $index ? $this->redirect(['action' => 'form','#' => $path[0]]) : null;
     }
 
     /**
@@ -144,6 +145,11 @@ class UsersController extends AppController
 
     public function form(){
         $user = $this->Auth->user();
+        debug($this->request);    
+        //switch($this->request->data){
+        //    case 'archive':
+        //    $items = $this->???
+        //break;
         $items = $this->paginate(TableRegistry::get("items")->find()->where(['user_id' => $user['user_id']]));
         $this->set(compact('user','items'));
     }

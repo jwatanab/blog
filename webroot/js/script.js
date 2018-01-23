@@ -4,6 +4,32 @@ $(function () {
   const $modal_window = $('#modal_window')
   const $form_container = $('.form_container')
   const $content_container = $('.content_container')
+  const $select_form = $(".select_form")
+  const url = location.hash.slice(1)
+
+  // Init
+
+  $select_form
+    .find('.archive')
+    .on('click',function(){
+        location.href = '/users/index/archive'
+    })
+
+  $select_form
+    .find('.news')
+    .on('click',function(){
+        location.href = '/users/index/news'
+    })
+
+  $select_form
+    .find('.user')
+    .on('click', function(){
+        location.href = '/users/index/user'
+    })
+
+  $select_form
+    .find(`.${url}`)
+    .css({'color': '#72bbdb'})
 
   $form_container
     .find('.content_post')

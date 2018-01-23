@@ -29,9 +29,9 @@
 </div>
 <div class="user_content_main_title">User Content</div>
 <div class="select_form">
-    <div class="content_title">Report link</div>
-    <div class="content_title">News</div>
-    <div class="content_title">User</div>
+    <div class="content_title archive">Report link</div>
+    <div class="content_title news">News</div>
+    <div class="content_title user">User</div>
 </div>
 <div class="content_container">
     <div class="content_title">Archive</div>

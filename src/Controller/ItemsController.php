@@ -20,14 +20,7 @@ class ItemsController extends AppController
      */
     public function index()
     {
-        $this->redirect('/users');
-    }
-
-    public function md(){
-        debug($this->request->getData());
-        $text = "### Document\n***\n- 僕は磯野かつおです\n\t- 娘のわかめです";
-        $html = Markdown::defaultTransform( $text );
-        $this->set(compact('html'));
+        $this->redirect(['controller' => 'Users', 'action' => 'index']);
     }
 
     /**

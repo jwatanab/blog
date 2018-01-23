@@ -73,7 +73,7 @@ class AppController extends Controller
             // 認証後のリダイレクト先
             'loginRedirect' => [
                 'controller' => 'Users',
-                'action' => 'form'
+                'action' => 'index'
             ],
             // ログアウトが呼ばれた時のリダイレクト先
             'logoutRedirect' => [
